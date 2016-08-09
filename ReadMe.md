@@ -40,15 +40,20 @@ any existing code.
 
 ```
 If all goes well till this time. You are ready to go ahead. Now you are ready to write your Models, Views and Controllers. Few things must be followed in creating your m,v and c.
-* Controller Name must be ends with 's' and must be appened by string "Controlled". For example: If you want your should look like : www.mysite.com/users/login  than you must create a controller name as "UsersController"  in "/app/controllers/" directory.
-* Model name must match with Controller name without 's' and Controller.  For example: For UsersController we will have "User" model in "/app/models".
-* Most imp:  A table must exists with the name of model with 's' in end.  For example: for User model there must be a 'users' table in the Database.
-* There must be a folder name with the same name of the controller without 's' and 'Controller' in end. For example: for UsersController there must be a folder named "users" in the "/app/views/" directory.
+* Controller Name must be ends with 's' and must be appened by string "Controlled". 
+For example: If you want your should look like : www.mysite.com/users/login  
+than you must create a controller name as "UsersController"  in "/app/controllers/" directory.
+* Model name must match with Controller name without 's' and Controller.  
+For example: For UsersController we will have "User" model in "/app/models".
+* Most imp:  A table must exists with the name of model with 's' in end.  
+For example: for User model there must be a 'users' table in the Database.
+* There must be a folder name with the same name of the controller without 's' 
+and 'Controller' in end. For example: for UsersController there must be a folder 
+named "users" in the "/app/views/" directory.
 *
 ```
 
 
-##  with url 'www.mysite.com/users/register' or 'localhost/mysite/users/register'
 
 
 ### Creating first running webpage
