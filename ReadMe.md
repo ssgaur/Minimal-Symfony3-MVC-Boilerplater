@@ -39,7 +39,9 @@ any existing code.
 ## Up and running with framework
 
 ```
-If all goes well till this time. You are ready to go ahead. Now you are ready to write your Models, Views and Controllers. Few things must be followed in creating your m,v and c.
+If all goes well till this time. You are ready to go ahead. Now you are ready to 
+write your Models, Views and Controllers. Few things must be followed in 
+creating your m,v and c.
 * Controller Name must be ends with 's' and must be appened by string "Controlled". 
 For example: If you want your should look like : www.mysite.com/users/login  
 than you must create a controller name as "UsersController"  in "/app/controllers/" directory.
