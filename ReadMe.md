@@ -80,6 +80,7 @@ Step to be followed -
 
 Explain what these tests test and why
 
+For Inserting  Data into table.
 ```
 function save($data){
 	
@@ -94,9 +95,68 @@ $data = array(
 		......			.....
 );
 
-returns:  if successfull id of last inserted record in table
+returns:  if successfull than id of last inserted record in table
 		  else  false
 ```
+
+For Updating data into table
+```
+function update($id,$data){
+	
+}
+format of $data - 
+$id is the auto incremented key of the table
+$data = array(
+	'columnName1' => $somevalue1,
+	'columnName2' => $somevalue2,
+	'columnName3' => $somevalue3,
+		......	  =>	.......			
+		......			.....
+);
+
+returns:  if successfull than true
+		  else  false
+```
+
+
+For Deleting single row from table
+```
+function destroy($id){
+	
+}
+$id : Id of the row which you want to delete from table
+returns:  if successfull than true
+		  else  false
+```
+
+Get all rows of the Model (table)
+```
+function all(){
+	
+}
+input: No input
+returns:  An associative array of the results from the table.
+```
+Get results by one column of the table (Model)
+```
+function find_By_Column($columnName,$columnValue){
+	
+}
+input: Column name and its value
+returns:  An associative array of the results from the table.
+```
+
+
+Get results by searching some column but with some substring not by 
+full column string.
+```
+function partial_String_Search($columnName,$partialString)
+	
+}
+input: Column name and substring which the results must contain
+returns:  An associative array of the results from the table.
+```
+
 
 ## Deployment
 
