@@ -76,12 +76,26 @@ Step to be followed -
 
 ```
 
-### And coding style tests
+### Available Model Mehtods
 
 Explain what these tests test and why
 
 ```
-Give an example
+function save($data){
+	
+}
+format of $data - 
+
+$data = array(
+	'columnName1' => $somevalue1,
+	'columnName2' => $somevalue2,
+	'columnName3' => $somevalue3,
+		......	  =>	.......			
+		......			.....
+);
+
+returns:  if successfull id of last inserted record in table
+		  else  false
 ```
 
 ## Deployment
