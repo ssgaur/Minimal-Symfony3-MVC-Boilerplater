@@ -1,1 +1,1 @@
-<h1> This is view called by index method in WelocomesController </h1>
+<h1> This is index view. Location: "/app/views/welcomes/index.php" </h1>
