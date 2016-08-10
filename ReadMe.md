@@ -157,6 +157,17 @@ input: Column name and substring which the results must contain
 returns:  An associative array of the results from the table.
 ```
 
+## How to render view from controller with the data.
+
+If you have followed all the above steps. And have created view file corresponding 
+to the controller folder and method name. You can render the html/view file by calling 
+
+```
+$this->_template->render($data);
+
+Where $data is an array() type. Can contains any information which you want to show 
+your view.
+``` 
 
 ## Deployment
 
