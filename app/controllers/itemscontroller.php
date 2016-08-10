@@ -15,7 +15,8 @@ class ItemsController extends Controller {
 		//$results = $item->all();
 		//$results = $item->find_By_Column("price","12340");
 		$results = $item->partial_String_Search("price","34");
-		print_r($results);
+		$this->_template->render($results);
+		//print_r($results);
 	}
 
 }
