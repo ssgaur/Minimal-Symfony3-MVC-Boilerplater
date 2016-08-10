@@ -8,6 +8,11 @@ class Controller {
 
 	function __construct($model, $controller, $action) {
 
+		if(!method_exists($controller."controller",$action)){
+			include (ROOT . DS . 'app' . DS . 'views' . DS . 'default_404.php');
+	    	die();
+		}
+
 		$this->_controller = $controller;
 		$this->_action = $action;
 		$this->_model = $model;
@@ -15,14 +20,6 @@ class Controller {
 		$this->$model = new $model;
 		$this->_template = new Template($controller,$action);
 
-	}
-
-	function set($name,$value) {
-		$this->_template->set($name,$value);
-	}
-
-	function __destruct() {
-			$this->_template->render();
 	}
 
 }

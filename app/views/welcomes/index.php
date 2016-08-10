@@ -1,0 +1,1 @@
+<h1> This is index view. Location: "/app/views/welcomes/index.php" </h1>

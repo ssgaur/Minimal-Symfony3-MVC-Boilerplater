@@ -28,12 +28,18 @@
 
     global $url;
 
+    if(empty($url)){
+    	$url = $config['default_controller']."/".$config['default_action'];
+    }
+
 	$urlArray = array();
 	$urlArray = explode("/",$url);
+	$controller = "";
+	$action = "";
 
-	$controller = $urlArray[0];
+	if(isset($urlArray[0]))  $controller = $urlArray[0];
 	array_shift($urlArray);
-	$action = $urlArray[0];
+	if(isset($urlArray[0]))  $action = $urlArray[0];
 	array_shift($urlArray);
 	$queryString = $urlArray;
 
@@ -41,6 +47,11 @@
 	$controller = ucwords($controller);
 	$model = rtrim($controller, 's');
 	$controller .= 'Controller';
+	if (! class_exists($controller)) {
+	    include (ROOT . DS . 'app' . DS . 'views' . DS . 'default_404.php');
+	    die();
+	}
+
 	$dispatch = new $controller($model,$controllerName,$action);
 
 	if ((int)method_exists($controller, $action)) {
