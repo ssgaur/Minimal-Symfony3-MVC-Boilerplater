@@ -2,7 +2,7 @@
 
 class ItemsController extends Controller {
 
-	function view($id = null,$name = null) {
+	function view() {
 		$data = array(
 			"title" => " other title retur  id",
 			"price" => "12340",

@@ -1,0 +1,1 @@
+<h1> This is view called by index method in WelocomesController </h1>

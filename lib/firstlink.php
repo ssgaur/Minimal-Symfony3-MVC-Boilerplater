@@ -28,6 +28,10 @@
 
     global $url;
 
+    if(empty($url)){
+    	$url = $config['default_controller']."/".$config['default_action'];
+    }
+
 	$urlArray = array();
 	$urlArray = explode("/",$url);
 
@@ -41,6 +45,7 @@
 	$controller = ucwords($controller);
 	$model = rtrim($controller, 's');
 	$controller .= 'Controller';
+
 	$dispatch = new $controller($model,$controllerName,$action);
 
 	if ((int)method_exists($controller, $action)) {

@@ -3,6 +3,7 @@
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(dirname(__FILE__)));
 
-$url = $_GET['url'];
+if(isset($_GET['url']))  $url = $_GET['url'];
+else $url = "";
 
 require_once (ROOT . DS . 'lib' . DS . 'firstlink.php');
